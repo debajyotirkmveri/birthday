@@ -44,31 +44,24 @@
     margin-top: 20px;
   }
 
-.photo-container {
-  position: relative;
-  display: inline-block;
-  overflow: visible;   /* allow cap outside image */
-}
+  .photo-container {
+    position: relative;
+    display: inline-block;
+  }
 
-.photo-container img {
-  width: 220px;
-  border-radius: 15px;
-  display: block;
-}
+  .photo-container img {
+    width: 220px;
+    border-radius: 15px;
+  }
 
   /* Birthday cap */
-.cap {
-  position: absolute;
-  width: 125px;              /* reduced size */
-  top: -45px;                /* move upward onto head */
-  left: 38%;                 /* shift slightly left */
-  transform: translateX(-50%) rotate(-12deg);
-  z-index: 3;
-  pointer-events: none;
-}
-
-
-
+  .cap {
+    position: absolute;
+    width: 100px;
+    top: -40px;
+    left: 60px;
+    transform: rotate(-15deg);
+  }
 
   /* Floating hearts */
   .heart {
@@ -95,10 +88,10 @@
 
   <div class="photo-container">
     <!-- YOUR IMAGE -->
-    <img src="image.jpg" alt="Sneha Photo">
+    image.jpg
 
     <!-- Birthday Cap -->
-    <img class="cap" src="https://cdn-icons-png.flaticon.com/512/744/744546.png">
+    https://cdn-icons-png.flaticon.com/512/744/744546.png
   </div>
 
   <div id="message"></div>
@@ -106,12 +99,12 @@
 
 <!-- Birthday Song -->
 <audio id="song" autoplay loop>
-  <source src="https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid" type="audio/midi">
+  https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid
 </audio>
 
 <script>
 
-const message = "🎉 Happy Birthday Sneha! 💖 You are truly special. May your day be filled with endless smiles, love, and beautiful memories. Stay happy always! 💕";
+const message = "🎉 Happy 17th Birthday Sneha Mukherjee! 💖 You are truly special. May your day be filled with endless smiles, love, and beautiful memories. Stay happy always! 💕";
 
 const targetDate = new Date("June 17, 2026 00:00:00").getTime();
 
