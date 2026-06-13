@@ -50,18 +50,19 @@
   overflow: visible;   /* allow cap outside image */
 }
 
-  .photo-container img {
-    width: 220px;
-    border-radius: 15px;
-  }
+.photo-container img {
+  width: 220px;
+  border-radius: 15px;
+  display: block;
+}
 
   /* Birthday cap */
 .cap {
   position: absolute;
-  width: 150px;              /* bigger to cover full head */
-  top: -25px;                /* bring down onto hair */
-  left: 42%;                 /* align with head (slightly left) */
-  transform: translateX(-50%) rotate(-14deg);
+  width: 125px;              /* reduced size */
+  top: -45px;                /* move upward onto head */
+  left: 38%;                 /* shift slightly left */
+  transform: translateX(-50%) rotate(-12deg);
   z-index: 3;
   pointer-events: none;
 }
@@ -112,7 +113,7 @@
 
 const message = "🎉 Happy Birthday Sneha! 💖 You are truly special. May your day be filled with endless smiles, love, and beautiful memories. Stay happy always! 💕";
 
-const targetDate = new Date("June 14, 2026 02:35:00").getTime();
+const targetDate = new Date("June 17, 2026 00:00:00").getTime();
 
 const timer = document.getElementById("timer");
 const msg = document.getElementById("message");
