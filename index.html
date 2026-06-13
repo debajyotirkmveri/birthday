@@ -45,22 +45,12 @@
   }
 
   .photo-container {
-    position: relative;
     display: inline-block;
   }
 
   .photo-container img {
     width: 220px;
     border-radius: 15px;
-  }
-
-  /* Birthday cap */
-  .cap {
-    position: absolute;
-    width: 100px;
-    top: -40px;
-    left: 60px;
-    transform: rotate(-15deg);
   }
 
   /* Floating hearts */
@@ -87,29 +77,27 @@
   <div id="timer"></div>
 
   <div class="photo-container">
-    <!-- YOUR IMAGE -->
-    image.jpg
-
-    <!-- Birthday Cap -->
-    https://cdn-icons-png.flaticon.com/512/744/744546.png
+    <!-- IMAGE -->
+    <img src="image.jpg" alt="Sneha Photo">
   </div>
 
   <div id="message"></div>
 </div>
 
-<!-- Birthday Song -->
-<audio id="song" autoplay loop>
-  https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid
+<!-- AUDIO -->
+<audio id="song" loop>
+  <source src="https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid" type="audio/midi">
 </audio>
 
 <script>
 
-const message = "🎉 Happy 17th Birthday Sneha Mukherjee! 💖 You are truly special. May your day be filled with endless smiles, love, and beautiful memories. Stay happy always! 💕";
+const message = "🎉 Happy Birthday Sneha! 💖 You are truly special. May your day be filled with endless smiles, love, and beautiful memories. Stay happy always! 💕";
 
-const targetDate = new Date("June 17, 2026 00:00:00").getTime();
+const targetDate = new Date("June 14, 2026 02:50:00").getTime();
 
 const timer = document.getElementById("timer");
 const msg = document.getElementById("message");
+const song = document.getElementById("song");
 
 function updateTimer() {
   const now = new Date().getTime();
@@ -118,7 +106,7 @@ function updateTimer() {
   if (diff < 0) {
     timer.style.display = "none";
     startTyping();
-    document.getElementById("song").play();
+    song.play(); // ✅ audio plays when countdown ends
     return;
   }
 
