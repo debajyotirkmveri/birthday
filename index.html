@@ -49,11 +49,6 @@
     border-radius: 15px;
   }
 
-  iframe {
-    margin-top: 20px;
-    border-radius: 15px;
-  }
-
   /* Floating hearts */
   .heart {
     position: absolute;
@@ -82,7 +77,6 @@
     <img src="image.jpg" alt="Sneha Photo">
   </div>
 
-
   <div id="message"></div>
 
 </div>
@@ -91,7 +85,8 @@
 
 const message = "🎉 Happy Birthday Sneha! 💖 You are truly special. May your day be filled with endless smiles, love, and beautiful memories. Stay happy always! 💕";
 
-const targetDate = new Date("June 14, 2026 02:50:00").getTime();
+// ✅ Set correct future birthday date
+const targetDate = new Date("June 14, 2026 00:00:00").getTime();
 
 const timer = document.getElementById("timer");
 const msg = document.getElementById("message");
@@ -127,12 +122,6 @@ function startTyping() {
   }
   type();
 }
-
-/* Enable sound on click */
-document.body.addEventListener("click", () => {
-  const video = document.getElementById("video");
-  video.src = video.src.replace("mute=1", "mute=0");
-});
 
 /* Floating hearts */
 setInterval(() => {
